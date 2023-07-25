@@ -45,6 +45,7 @@ const Screping = async () => {
 
     await brawser.close()
 }
-setTimeout(Screping, 20000)
+Screping()
+//setTimeout(Screping, 20000)
 
 module.exports = Screping
