@@ -10,11 +10,9 @@ app.use(express.json())
 
 app.get("/", (req, res) => {
     
-    res.json({
-        dados
-    })
+    res.send(dados)
+    app.use(geraDaos)
 })
-app.use(geraDaos)
 
 app.listen(port, () => {
     console.log("http://localhost:" + port)
