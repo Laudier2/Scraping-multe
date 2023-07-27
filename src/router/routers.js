@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
 })
 
 router.get("/api", (req, res) => {
-    async function Roda(){
+    function Roda(){
         return Screping()
     }
     Roda()
