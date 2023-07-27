@@ -1,13 +1,17 @@
 const { Router } = require("express")
 const dados = require("../data.json")
+const Screping = require("../dadosFut")
 
 const router = Router()
 
 router.get("/", (req, res) => {
-    res.send(dados)
+    res.send({ComoUsar: "Para usar a api use /api"})
 })
 
 router.get("/api", (req, res) => {
+    (async() => {
+        return Screping()
+    })()
     res.send(dados)
 })
 
